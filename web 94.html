@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Sekolah - SMAN 94 Jakarta</title>
+  <style>
+    body { font-family: "Segoe UI", sans-serif; margin: 0; background: #f4f6f9; }
+    header {
+      background: linear-gradient(135deg, #004080, #0066cc);
+      color: white; padding: 20px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo-title { display: flex; align-items: center; gap: 15px; }
+    header img { width: 70px; height: auto; }
+    .social-links a { margin-left: 15px; text-decoration: none; }
+    .social-links svg { width: 28px; height: 28px; fill: white; transition: transform 0.3s; }
+    .social-links svg:hover { transform: scale(1.2); }
+
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: #0066cc; display: flex; justify-content: center; padding: 12px 0;
+    }
+    nav a {
+      color: white; text-decoration: none; margin: 0 15px;
+      font-weight: bold; cursor: pointer;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    main { padding: 20px; }
+    section { display: none; animation: fadeIn 0.6s ease; }
+    section.active { display: block; }
+
+    h2 { color: #004080; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+      <img src="logo-sekolah.png" alt="Logo Sekolah">
+      <h1>SMAN 94 Jakarta</h1>
+    </div>
+    <div class="social-links">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/smanegeri94jkt" target="_blank" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm8.75 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/>
+        </svg>
+      </a>
+      <!-- YouTube -->
+      <a href="https://www.youtube.com/@officialsman94jakarta" target="_blank" aria-label="YouTube">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M21.8 8.001a2.75 2.75 0 0 0-1.94-1.947C18.01 6 12 6 12 6s-6.01 0-7.86.054A2.75 2.75 0 0 0 2.2 8.001 28.7 28.7 0 0 0 2 12a28.7 28.7 0 0 0 .2 3.999 2.75 2.75 0 0 0 1.94 1.947C5.99 18 12 18 12 18s6.01 0 7.86-.054a2.75 2.75 0 0 0 1.94-1.947A28.7 28.7 0 0 0 22 12a28.7 28.7 0 0 0-.2-3.999zM10 15V9l5 3-5 3z"/>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('tentang')">Tentang Sekolah</a>
+    <a onclick="showSection('ekstrakurikuler')">Ekstrakurikuler</a>
+    <a onclick="showSection('guru')">Guru</a>
+    <a onclick="showSection('siswa')">Siswa</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+      <h2>Selamat Datang di SMAN 94 Jakarta</h2>
+      <p>SMAN 94 Jakarta adalah sekolah menengah atas yang berkomitmen pada pendidikan berkualitas, pengembangan karakter, dan prestasi siswa.</p>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang Sekolah</h2>
+      <h3>Profil</h3>
+      <p>SMAN 94 Jakarta merupakan salah satu sekolah unggulan di DKI Jakarta yang berdiri sejak tahun 1985.</p>
+      <h3>Visi</h3>
+      <p>Menjadi sekolah yang menghasilkan lulusan berprestasi, berkarakter, dan berwawasan global.</p>
+      <h3>Misi</h3>
+      <ul>
+        <li>Meningkatkan mutu pembelajaran.</li>
+        <li>Mendorong pengembangan potensi siswa di bidang akademik dan non-akademik.</li>
+        <li>Menanamkan nilai budaya dan karakter bangsa.</li>
+      </ul>
+      <h3>Sejarah</h3>
+      <p>Pada awal berdirinya tahun 1985, SMAN 94 Jakarta mulai beroperasi dengan sarana dan prasarana sederhana. Seiring berjalannya waktu, sekolah ini berkembang pesat dengan fasilitas modern, guru profesional, serta prestasi akademik dan non-akademik yang membanggakan. Saat ini, SMAN 94 Jakarta dikenal sebagai salah satu SMA favorit di ibu kota yang menghasilkan banyak alumni sukses di berbagai bidang.</p>
+    </section>
+
+    <section id="ekstrakurikuler">
+      <h2>Ekstrakurikuler</h2>
+      <ul>
+        <li onclick="alert('Prestasi Paskibra: Juara 1 Tingkat Provinsi 2023')">Paskibra</li>
+        <li onclick="alert('Prestasi Basket: Juara 2 Kejuaraan Antar SMA se-Jakarta 2022')">Basket</li>
+        <li onclick="alert('Prestasi Seni Tari: Tampil di Festival Budaya Nasional 2021')">Seni Tari</li>
+      </ul>
+    </section>
+
+    <section id="guru">
+      <h2>Daftar Guru</h2>
+      <table>
+        <tr><th>Nama</th><th>Mata Pelajaran</th></tr>
+        <tr><td>Drs. Budi Santoso</td><td>Matematika</td></tr>
+        <tr><td>Dra. Siti Aminah</td><td>Bahasa Indonesia</td></tr>
+        <tr><td>Agus Pratama, M.Pd</td><td>Fisika</td></tr>
+      </table>
+    </section>
+
+    <section id="siswa">
+      <h2>Daftar Siswa</h2>
+      <table>
+        <tr><th>No</th><th>Nama</th><th>Kelas</th></tr>
+        <tr><td>1</td><td>Andi Wijaya</td><td>X IPA 1</td></tr>
+        <tr><td>2</td><td>Siti Rahma</td><td>X IPS 2</td></tr>
+        <tr><td>3</td><td>Budi Hartono</td><td>XI IPA 1</td></tr>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("main section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+</body>
+</html>
